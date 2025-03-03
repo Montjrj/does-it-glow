@@ -18,7 +18,8 @@ In a new file named `ThemeContext.jsx`:
    - `isDark` is a boolean state variable
    - `theme` is `dark` if it `isDark`; otherwise it is `light`
    - `toggleTheme` is a function that sets `isDark` to the opposite value when called
-3. Export a custom hook named `useTheme`, which subscribes to `ThemeContext` if
+3. Export a custom hook named `useTheme`, which subscribes to `ThemeContext` if possible.
+   It throws an Error if called outside `ThemeProvider` (i.e. `useContext` returns null).
 4. Provide the newly created context to your app by wrapping it with `<ThemeProvider/>` in
    `main.jsx`.
 5. Use the [React Developer Tools](https://react.dev/learn/react-developer-tools) to

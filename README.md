@@ -15,8 +15,8 @@ In a new file named `ThemeContext.jsx`:
 
 1. Create a new context named `ThemeContext`.
 2. Export `ThemeProvider`, which provides three values to its children:
-   - `isDark` is a boolean state variable
-   - `theme` is `dark` if it `isDark`; otherwise it is `light`
+   - `isDark` is a boolean state variable with an initial value of `false`
+   - `theme` is `"dark"` if it `isDark`; otherwise it is `"light"`
    - `toggleTheme` is a function that sets `isDark` to the opposite value when called
 3. Export a custom hook named `useTheme`, which subscribes to `ThemeContext` if possible.
    It throws an Error if called outside `ThemeProvider` (i.e. `useContext` returns null).
